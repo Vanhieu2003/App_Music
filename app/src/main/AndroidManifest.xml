@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +13,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_Music"
         tools:targetApi="31">
+        <activity
+            android:name=".Activity.SignUpArtistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ArtistHomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminHomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ArtistLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignUpActivity"
+            android:exported="false" />
         <activity
             android:name=".Activity.OptionActivity"
             android:exported="false" />

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
     android:gravity="center_horizontal"
-    tools:context=".Activity.LoginActivity"
+    tools:context=".Activity.SignUpActivity"
     android:background="@color/black"
     android:orientation="horizontal">
 
@@ -17,7 +17,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="110dp"
-        android:layout_marginTop="100dp"
+
         android:background="@drawable/spotifylogin" />
 
     <Button
@@ -25,7 +25,6 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="Spotify ®"
@@ -38,10 +37,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="34dp"
         android:gravity="center"
-        android:text="Login"
+        android:text="SignUp"
         android:textColor="@color/white"
         android:textSize="30dp" />
 
@@ -51,44 +50,55 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="34dp"
         android:text="Email:"
         android:textColor="@color/white"
         android:textSize="20dp" />
 
 
-
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="34dp"
+    android:layout_marginTop="250dp"
+    android:layout_marginEnd="34dp"
+    android:text="Password-Check:"
+    android:textColor="@color/white"
+    android:textSize="18dp" />
 
     <EditText
+        android:id="@+id/edt_passcheck_signup"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center"
         android:layout_marginStart="34dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="275dp"
         android:layout_marginEnd="34dp"
         android:background="@color/white"
-        android:gravity="center"
+        android:inputType="textPassword"
         android:text=""
         android:textSize="15dp"
         android:textColor="@color/black"
-       />
+        />
 
 
 
     <EditText
-        android:id="@+id/edt_mail"
+        android:id="@+id/edt_mail_signup"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="34dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="29dp"
         android:background="@color/white"
         android:textColor="@color/black"
@@ -100,43 +110,97 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="34dp"
         android:text="Password:"
         android:textColor="@color/white"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/edt_pass"
+        android:id="@+id/edt_pass_signup"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center"
         android:layout_marginStart="34dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="205dp"
         android:layout_marginEnd="34dp"
         android:background="@color/white"
         android:inputType="textPassword"
         android:textSize="15dp"
         android:textColor="@color/black"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="34dp"
+        android:text="TenNguoiDung:"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="345dp"
+        android:layout_marginEnd="34dp"
+        android:background="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginEnd="34dp"
+        android:text="Họ và tên:"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/edt_hovaten"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="34dp"
+        android:background="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appcompatlogin"
+        android:id="@+id/appcompat_signup"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="34dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="500dp"
         android:layout_marginEnd="34dp"
         android:background="@drawable/oval_button"
         android:gravity="center"
-        android:onClick="onLogin"
-        android:text="LOG IN"
+        android:onClick="onSignUp"
+        android:text="SIGN UP"
         android:textSize="15dp"
         android:textColor="@color/black"
         tools:ignore="OnClick" />

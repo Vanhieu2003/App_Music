@@ -7,17 +7,17 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
     android:gravity="center_horizontal"
-    tools:context=".Activity.LoginActivity"
+    tools:context=".Activity.AdminHomePageActivity"
     android:background="@color/black"
     android:orientation="horizontal">
 
 
     <ImageView
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_get_profile"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="110dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/spotifylogin" />
 
     <Button
@@ -25,120 +25,77 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:background="@android:color/transparent"
         android:gravity="center"
         android:text="Spotify ®"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="110dp"
         android:layout_marginEnd="34dp"
         android:gravity="center"
-        android:text="Login"
-        android:textColor="@color/white"
-        android:textSize="30dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="34dp"
-        android:text="Email:"
+        android:text="Welcom Admin "
         android:textColor="@color/white"
         android:textSize="20dp" />
-
-
-
-
-    <EditText
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginEnd="34dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:text=""
-        android:textSize="15dp"
-        android:textColor="@color/black"
-       />
-
-
-
-    <EditText
-        android:id="@+id/edt_mail"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginEnd="29dp"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="34dp"
-        android:text="Password:"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
-
-    <EditText
-        android:id="@+id/edt_pass"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="34dp"
-        android:background="@color/white"
-        android:inputType="textPassword"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appcompatlogin"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
         android:layout_marginStart="34dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="34dp"
         android:background="@drawable/oval_button"
+        android:onClick="onOptionAccountArtist"
         android:gravity="center"
-        android:onClick="onLogin"
-        android:text="LOG IN"
+        android:text="CREATE ACCOUNT ARTIST"
         android:textSize="15dp"
         android:textColor="@color/black"
         tools:ignore="OnClick" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/button_oval_white"
+        android:gravity="center"
+        android:onClick="onOptionLogin_admin"
+        android:text="LOG IN USER"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        tools:ignore="OnClick" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/oval_button"
+        android:gravity="center"
+        android:onClick="onOptionLogout_admin"
+        android:text="LOG OUT"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        tools:ignore="OnClick" />
+
 
 </RelativeLayout>

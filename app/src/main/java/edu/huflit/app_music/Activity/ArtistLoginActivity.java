@@ -20,22 +20,23 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-import edu.huflit.app_music.MainActivity;
 import edu.huflit.app_music.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class ArtistLoginActivity extends AppCompatActivity {
     private EditText edt_mail, edt_pass;
-   private androidx.appcompat.widget.AppCompatButton btnlogin;
+    private androidx.appcompat.widget.AppCompatButton btnlogin;
 
     private boolean accept = false;
     static String Email;
     static Boolean isLogin = false;
-    private static final String url = "https://vanhieu260303.000webhostapp.com/Server/Login.php";
-
+    private static final String url = "https://vanhieu260303.000webhostapp.com/Server/LoginArtist.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_artist_login);
+
+        edt_mail = findViewById(R.id.edt_mail);
+        edt_pass = findViewById(R.id.edt_pass);
 
         edt_mail = findViewById(R.id.edt_mail);
         edt_pass = findViewById(R.id.edt_pass);
@@ -43,12 +44,12 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login_user(edt_mail.getText().toString(), edt_pass.getText().toString());
+                login_artist(edt_mail.getText().toString(), edt_pass.getText().toString());
             }
         });
     }
 
-    public void login_user(final String email, final String password) {
+    public void login_artist(final String email, final String password) {
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -56,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(response.compareTo("Đăng nhập thành công")==0){
                     isLogin = true;
                     Email= email;
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(ArtistLoginActivity.this, ArtistHomePageActivity.class);
                     Bundle bundle = new Bundle();
 
                     bundle.putBoolean("islogin",isLogin);
@@ -86,4 +87,5 @@ public class LoginActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         queue.add(request);
     }
+
 }
