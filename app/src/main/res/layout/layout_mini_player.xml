@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/miniPlayerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/miniPlayerImageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/trucnhan" />
+
+    <TextView
+        android:id="@+id/miniPlayerSongName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Song Name"
+        android:textSize="14sp"
+        android:padding="8dp" />
+
+    <ImageButton
+        android:id="@+id/miniPlayerPlayPauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+</LinearLayout>

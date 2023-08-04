@@ -1,4 +1,4 @@
-package edu.huflit.app_music.API;
+package edu.huflit.app_music.APIServer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
