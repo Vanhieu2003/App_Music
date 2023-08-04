@@ -14,7 +14,7 @@
         android:theme="@style/Theme.App_Music"
         tools:targetApi="31">
         <activity
-            android:name=".InsertMusicActivity"
+            android:name=".Activity.InsertMusicActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SignUpArtistActivity"
