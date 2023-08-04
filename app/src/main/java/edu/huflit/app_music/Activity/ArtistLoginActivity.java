@@ -54,15 +54,12 @@ public class ArtistLoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
-                if(response.compareTo("Đăng nhập thành công")==0){
+                if (response.compareTo("Đăng nhập thành công") == 0) {
                     isLogin = true;
-                    Email= email;
+                    Email = email;
                     Intent intent = new Intent(ArtistLoginActivity.this, ArtistHomePageActivity.class);
-                    Bundle bundle = new Bundle();
-
-                    bundle.putBoolean("islogin",isLogin);
-                    bundle.putString("userName",Email);
-                    intent.putExtra("status",bundle);
+                    intent.putExtra("islogin", isLogin); // Thêm dòng này để truyền giá trị isLogin qua Intent
+                    intent.putExtra("userName", Email);
                     startActivity(intent);
                     finish();
                 }

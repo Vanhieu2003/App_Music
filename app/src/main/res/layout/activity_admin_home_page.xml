@@ -34,6 +34,7 @@
         android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/tv_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -42,7 +43,7 @@
         android:layout_marginTop="110dp"
         android:layout_marginEnd="34dp"
         android:gravity="center"
-        android:text="Welcom Admin "
+        android:text="Xin chào,người dùng "
         android:textColor="@color/white"
         android:textSize="20dp" />
 
@@ -81,6 +82,7 @@
         android:textColor="@color/black"
         tools:ignore="OnClick" />
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout_admin"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -91,11 +93,9 @@
         android:layout_marginEnd="34dp"
         android:background="@drawable/oval_button"
         android:gravity="center"
-        android:onClick="onOptionLogout_admin"
         android:text="LOG OUT"
         android:textSize="15dp"
-        android:textColor="@color/black"
-        tools:ignore="OnClick" />
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>
