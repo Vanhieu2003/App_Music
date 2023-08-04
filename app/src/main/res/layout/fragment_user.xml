@@ -1,15 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
     android:background="@color/black"
-    tools:context=".Fragment.UserFragment">
+    android:orientation="horizontal">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/btn_get_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/spotifylogin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="Spotify ®"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="34dp"
+        android:gravity="center"
+        android:text="Xin chào, người dùng"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/button_oval_white"
+        android:gravity="center"
+        android:onClick="onOptionLogin"
+        android:text="Đổi mật khẩu"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        tools:ignore="OnClick" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout_user"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/oval_button"
+        android:gravity="center"
+        android:text="LOG OUT"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        />
+
+
+
 
 </RelativeLayout>

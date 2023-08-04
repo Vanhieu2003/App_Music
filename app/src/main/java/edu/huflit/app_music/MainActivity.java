@@ -17,11 +17,19 @@ import edu.huflit.app_music.Fragment.LibraryMusicFragment;
 import edu.huflit.app_music.Fragment.UserFragment;
 
 public class MainActivity extends AppCompatActivity {
-
+    private boolean isLogin;
+    private String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Nhận dữ liệu đăng nhập từ Intent
+        Bundle bundle = getIntent().getBundleExtra("status");
+        if (bundle != null) {
+            isLogin = bundle.getBoolean("islogin", false);
+            userName = bundle.getString("userName", "");
+        }
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomnavigation);
         replaceFragment(new HomeFragment());
@@ -38,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
                         replaceFragment(new LibraryMusicFragment());
                         return true;
                     case R.id.user:;
-                        replaceFragment(new UserFragment());
+                        UserFragment userFragment = new UserFragment();
+                        Bundle args = new Bundle();
+                        args.putBoolean("islogin", isLogin);
+                        args.putString("userName", userName);
+                        userFragment.setArguments(args);
+                        replaceFragment(userFragment);
                         return true;
 
                 }

@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(response.compareTo("Đăng nhập thành công")==0){
                     isLogin = true;
                     Email= email;
+
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     Bundle bundle = new Bundle();
 
